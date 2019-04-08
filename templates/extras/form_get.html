@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load static %}
+    {% csrf_token %}
+    <script src="{% static 'js/service.js' %}"></script>
+    <div class="container">
+        <div class="col-xs-12 center-block">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+                <h3>Ingresa los siguientes datos: </h3>
+            </div>
+            <form action="">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="estatura">Estatura:</label>
+                    <input type="number" class="form-control" id="height" placeholder="En centimetros">
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" class="form-control" id="weight" placeholder="example: 54">
+                </div>
+                
+                <button id="learn" type="submit" class="btn btn-success">Guardar</button>
+            </form> 
+        </div>
+    </div>
+{% endblock %}

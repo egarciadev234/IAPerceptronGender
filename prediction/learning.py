@@ -9,7 +9,6 @@ class Learning:
 
     def predict(self,values):
         weighted_average = sum(w * elm for w, elm in zip(self._w,values))
-        d = []
         if weighted_average > 0:
            return 1
         return 0
@@ -27,7 +26,6 @@ class Learning:
         instance = Learning(3)
         for _ in range(100):
             for person in data_persons:
-                
                 output = person[-1]
                 inp = [1] + person[0:-1]
                 err = instance.train(inp,output)

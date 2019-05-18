@@ -37,16 +37,16 @@ $(document).ready(function()
             url: 'http://localhost:8000/descubrir',
             data: {height:estatura, weight:peso},
             success: function(data){
-                console.log(data["result"])
                 if(data["result"] == 1){
-                    genero = "Mujer"
+                    genero = "Mujer";
                 }
                 else{
-                    genero = "Hombre"
+                    genero = "Hombre";
                 }
                 swal("Gracias!", "Segun nuestro sistema de IA tu eres: " + genero, "");
             },
         })
     });
-    
 });
+
+    
